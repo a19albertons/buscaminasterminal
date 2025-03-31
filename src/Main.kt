@@ -1,20 +1,33 @@
 fun main() {
     val buscaminas = Buscaminas()
-    buscaminas.crearTablero(4,4,2)
+    println("Dame 2 numero por un espacio para el tamaño de su tablero que sean positivos")
+    val tamano= readln().split(" ").map { it.toInt() }
+    println("Dame un numero de minas sea coherente y logico con el tamaño de su tablero")
+    val numMinas = readln().toInt()
+    buscaminas.crearTablero(tamano[0],tamano[1],numMinas)
     mostrarTablero(buscaminas.tableroFinal)
     println("Dame una X y una Y separadas por un espcaio")
     var coordenadas = readln().split(" ")
-    println("Indica si es descubrir (D) o marcar (M)")
+    println("Indica si es descubrir (D), marcar (M) o desmarcar ('')")
     var tipo = readln().uppercase().first()
     buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
     mostrarTablero(buscaminas.tableroFinal)
     while (!(buscaminas.esMina(coordenadas[0].toInt(), coordenadas[1].toInt()) && tipo == 'D')) {
+        if (buscaminas.ganar()){
+            break
+        }
         println("Dame una X y una Y separadas por un espcaio")
         coordenadas = readln().split(" ")
-        println("Indica si es descubrir (D) o marcar (M)")
+        println("Indica si es descubrir (D), marcar (M) o desmarcar ('')")
         tipo = readln().uppercase().first()
         buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
         mostrarTablero(buscaminas.tableroFinal)
+    }
+    if (buscaminas.ganar()){
+        println("has ganado")
+    }
+    else {
+        println("has perdido")
     }
 
 

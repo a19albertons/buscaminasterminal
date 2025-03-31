@@ -5,6 +5,7 @@ class Buscaminas {
     lateinit var tableroMinas: MutableList<StringBuilder>
     lateinit var tableroBanderas: MutableList<StringBuilder>
     lateinit var tableroFinal:MutableList<StringBuilder>
+    var numMinas = 0
 
 
 
@@ -128,6 +129,7 @@ class Buscaminas {
 
 //    Create by ChatGPT
     fun añadirMinas(temporal: MutableList<StringBuilder> ,numMinas: Int) {
+        this.numMinas=numMinas
         val rows = temporal.size
         if (rows == 0) return
         val cols = temporal[0].length
@@ -181,6 +183,22 @@ class Buscaminas {
         }
         else {
             return true
+        }
+    }
+    fun ganar():Boolean{
+        var numGuiones=0
+        for (i in 0 until tablero.size){
+            for (j in 0 until tablero[i].length) {
+                if (tablero[i][j]=='-') {
+                    numGuiones++
+                }
+            }
+        }
+        if (numGuiones==numMinas) {
+            return true
+        }
+        else {
+            return false
         }
     }
 }
