@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="">
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Primer candidato buscaminas funcional">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Buscaminas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buscaminas.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
@@ -64,19 +64,32 @@
       <option name="presentableId" value="Default" />
       <updated>1743405864464</updated>
     </task>
+    <task id="LOCAL-00001" summary="Primer candidato buscaminas funcional">
+      <option name="closed" value="true" />
+      <created>1743415177953</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743415177954</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer candidato buscaminas funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer candidato buscaminas funcional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/Buscaminas.kt</url>
-          <line>162</line>
-          <properties class="Buscaminas">
+          <line>154</line>
+          <properties class="Buscaminas" method="desmarcar">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="5" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,26 +8,29 @@ fun main() {
     mostrarTablero(buscaminas.tableroFinal)
     println("Dame una X y una Y separadas por un espcaio")
     var coordenadas = readln().split(" ")
-    println("Indica si es descubrir (D), marcar (M) o desmarcar ('')")
+    println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
     var tipo = readln().uppercase().first()
     buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
-    mostrarTablero(buscaminas.tableroFinal)
     while (!(buscaminas.esMina(coordenadas[0].toInt(), coordenadas[1].toInt()) && tipo == 'D')) {
         if (buscaminas.ganar()){
             break
         }
+        else {
+            mostrarTablero(buscaminas.tableroFinal)
+        }
         println("Dame una X y una Y separadas por un espcaio")
         coordenadas = readln().split(" ")
-        println("Indica si es descubrir (D), marcar (M) o desmarcar ('')")
+        println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
         tipo = readln().uppercase().first()
         buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
-        mostrarTablero(buscaminas.tableroFinal)
     }
     if (buscaminas.ganar()){
         println("has ganado")
     }
     else {
-        println("has perdido")
+        println("has perdido estas eran las ubicaciones de las minas")
+        mostrarTablero(buscaminas.tableroMinas)
+
     }
 
 

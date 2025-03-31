@@ -120,7 +120,7 @@ class Buscaminas {
         }
 //      diferenciación profunda chat gpt
         tablero=temporal.map { StringBuilder(it.toString()) }.toMutableList()
-        tableroFinal=tablero
+        tableroFinal=temporal.map { StringBuilder(it.toString()) }.toMutableList()
         tableroBanderas=temporal.map { StringBuilder(it.toString()) }.toMutableList()
         añadirMinas(temporal, numMinas)
         tableroMinas=temporal.map { StringBuilder(it.toString()) }.toMutableList()
@@ -163,12 +163,12 @@ class Buscaminas {
         else if (accion == 'M') {
             marcar(x,y)
         }
-        else {
+        else if (accion == ' '){
             desmarcar(x,y)
         }
     }
     fun actualizarFinal(){
-        tableroFinal=tablero
+        tableroFinal=tablero.map { StringBuilder(it.toString()) }.toMutableList()
         for (i in 0 until tableroBanderas.size) {
             for (j in 0 until tableroBanderas[i].length) {
                 if (tableroBanderas[i][j] == '*') {
