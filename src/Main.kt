@@ -38,9 +38,18 @@ fun main() {
 
 }
 fun mostrarTablero(tablero: MutableList<StringBuilder>) {
+    var encabezado=0
+    for (i in 0 until tablero.size) {
+        encabezado++
+        if (encabezado==10){
+            encabezado-=10
+        }
+        print("$encabezado ")
+    }
+    println()
     for (i in 0 until tablero.size) {
         for (j in tablero[i]) {
-            print(j)
+            print("$j ")
         }
         println()
     }
