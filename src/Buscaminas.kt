@@ -145,8 +145,10 @@ class Buscaminas {
     }
 
     fun indicarDescubrimiento(x: Int, y: Int){
-        descubrir_mapa(x-1, y-1)
-        actualizarFinal()
+        if (tableroBanderas[x-1][y-1]!='B') {
+            descubrir_mapa(x-1, y-1)
+            actualizarFinal()
+        }
     }
     fun marcar(x:Int, y:Int){
         tableroBanderas[x-1][y-1]='*'
