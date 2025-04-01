@@ -11,7 +11,7 @@ fun main() {
     println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
     var tipo = readln().uppercase().first()
     buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
-    while (!(buscaminas.esMina(coordenadas[0].toInt(), coordenadas[1].toInt()) && tipo == 'D')) {
+    while (!(buscaminas.esMina(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo))) {
         if (buscaminas.ganar()){
             break
         }

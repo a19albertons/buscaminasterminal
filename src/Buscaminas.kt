@@ -177,12 +177,12 @@ class Buscaminas {
             }
         }
     }
-    fun esMina(x:Int, y:Int):Boolean{
-        if (tableroMinas[x-1][y-1] != '*') {
-            return false
+    fun esMina(x:Int, y:Int, tipo:Char):Boolean{
+        if (tableroMinas[x-1][y-1] == '*' && tableroBanderas[x-1][y-1] == '-' && tipo == 'D' ) {
+            return true
         }
         else {
-            return true
+            return false
         }
     }
     fun ganar():Boolean{
