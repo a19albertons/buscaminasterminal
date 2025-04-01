@@ -6,7 +6,7 @@ fun main() {
     val numMinas = readln().toInt()
     buscaminas.crearTablero(tamano[0],tamano[1],numMinas)
     mostrarTablero(buscaminas.tableroFinal)
-    println("Dame una X y una Y separadas por un espcaio")
+    println("Dame una X (fila) y una Y (columna) separadas por un espcaio")
     var coordenadas = readln().split(" ")
     println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
     var tipo = readln().uppercase().first()
@@ -18,7 +18,7 @@ fun main() {
         else {
             mostrarTablero(buscaminas.tableroFinal)
         }
-        println("Dame una X y una Y separadas por un espcaio")
+        println("Dame una X (fila) y una Y (columna) separadas por un espcaio")
         coordenadas = readln().split(" ")
         println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
         tipo = readln().uppercase().first()
