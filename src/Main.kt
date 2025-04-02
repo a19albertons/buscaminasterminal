@@ -39,7 +39,7 @@ fun main() {
 }
 fun mostrarTablero(tablero: MutableList<StringBuilder>) {
     var encabezado=0
-    for (i in 0 until tablero.size) {
+    for (i in 0..<tablero.size) {
         encabezado++
         if (encabezado==10){
             encabezado=0
@@ -48,7 +48,7 @@ fun mostrarTablero(tablero: MutableList<StringBuilder>) {
     }
     println()
     encabezado=0
-    for (i in 0 until tablero.size) {
+    for (i in 0..<tablero.size) {
         encabezado++
         if (encabezado==10){
             encabezado=0
