@@ -10,7 +10,7 @@ class Buscaminas {
 
 
     // Controla el descubrimiento del mapa
-    private fun descubrir_mapa(x:Int, y:Int):Boolean {
+    private fun descubrirMapa(x:Int, y:Int):Boolean {
 //    Control de limites
         if (x !in tablero.indices || y !in tablero[x].indices) return false
 //    no eres casilla sin probar
@@ -18,33 +18,33 @@ class Buscaminas {
 
 //    Momento/Instruccion que controla si esta posicion tiene
 //    o no una mina con la funcion de comprobar_alrededor
-        tablero[x][y]=comprobar_alrededor(x,y,tableroMinas)
+        tablero[x][y]=comprobarAlrededor(x,y,tableroMinas)
 
 //    Si sale una sola mina impide que siga este camino
         if (tablero[x][y]==' '){
 //    arriba-izquierda
-            descubrir_mapa(x - 1, y - 1)
+            descubrirMapa(x - 1, y - 1)
 
 //    arriba
-            descubrir_mapa(x - 1, y)
+            descubrirMapa(x - 1, y)
 
 //    arriba-derecha
-            descubrir_mapa(x - 1, y + 1)
+            descubrirMapa(x - 1, y + 1)
 
 //    izquierda
-            descubrir_mapa(x, y - 1)
+            descubrirMapa(x, y - 1)
 
 //    derecha
-            descubrir_mapa(x, y + 1)
+            descubrirMapa(x, y + 1)
 
 //    abajo-izquierda
-            descubrir_mapa(x + 1, y - 1)
+            descubrirMapa(x + 1, y - 1)
 
 //    abajo
-            descubrir_mapa(x + 1, y)
+            descubrirMapa(x + 1, y)
 
 //    abajo-derecha
-            descubrir_mapa(x + 1, y + 1)
+            descubrirMapa(x + 1, y + 1)
         }
 
         return false
@@ -53,51 +53,51 @@ class Buscaminas {
     //Controla las minas alrededor de una posicon dada. Si alguna casilla
 // el numero de minas no coincide con el esperado esta aqui el
 // problema ya ha sucedido
-    private fun comprobar_alrededor(x:Int, y:Int, tablero:MutableList<StringBuilder>):Char {
-        var contador_minas= 0
+    private fun comprobarAlrededor(x:Int, y:Int, tablero:MutableList<StringBuilder>):Char {
+        var contadorMinas= 0
 //    superior izquierda
         if (x-1 in tablero.indices && y-1 in tablero[x].indices && tablero[x-1][y-1]=='*') {
-            contador_minas++
+            contadorMinas++
         }
         //    superior
         if (x - 1 in tablero.indices && y in tablero[x].indices && tablero[x - 1][y] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    superior derecha
         if (x - 1 in tablero.indices && y + 1 in tablero[x].indices && tablero[x - 1][y + 1] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    izquierda
         if (x in tablero.indices && y - 1 in tablero[x].indices && tablero[x][y - 1] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    derecha
         if (x in tablero.indices && y + 1 in tablero[x].indices && tablero[x][y + 1] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    inferior izquierda
         if (x + 1 in tablero.indices && y - 1 in tablero[x].indices && tablero[x + 1][y - 1] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    inferior
         if (x + 1 in tablero.indices && y in tablero[x].indices && tablero[x + 1][y] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    inferior derecha
         if (x + 1 in tablero.indices && y + 1 in tablero[x].indices && tablero[x + 1][y + 1] == '*') {
-            contador_minas++
+            contadorMinas++
         }
 
 //    Devuelve o no un valor numerico dependiendo
 //    de lo que indica el contador de minas
-        return if (contador_minas!=0) {
-            contador_minas.toString().first()
+        return if (contadorMinas!=0) {
+            contadorMinas.toString().first()
         }
         else {
             ' '
@@ -111,9 +111,9 @@ class Buscaminas {
     // fun crear tablero
     fun crearTablero(x: Int, y: Int, numMinas: Int) {
         val temporal = mutableListOf<StringBuilder>()
-        for (i in 0 until x) {
+        for (i in 0..<x) {
             val temporal2 = StringBuilder()
-            for (j in 0 until y ) {
+            for (j in 0..<y) {
                 temporal2.append("-")
             }
             temporal.add(temporal2)
@@ -146,7 +146,7 @@ class Buscaminas {
 
     private fun indicarDescubrimiento(x: Int, y: Int){
         if (tableroBanderas[x-1][y-1]!='B') {
-            descubrir_mapa(x-1, y-1)
+            descubrirMapa(x-1, y-1)
             actualizarFinal()
         }
     }
@@ -159,20 +159,22 @@ class Buscaminas {
         actualizarFinal()
     }
     fun accionRealizar(x: Int, y: Int, accion: Char){
-        if (accion == 'D'){
-            indicarDescubrimiento(x, y)
-        }
-        else if (accion == 'M') {
-            marcar(x,y)
-        }
-        else if (accion == ' '){
-            desmarcar(x,y)
+        when (accion) {
+            'D' -> {
+                indicarDescubrimiento(x, y)
+            }
+            'M' -> {
+                marcar(x,y)
+            }
+            ' ' -> {
+                desmarcar(x,y)
+            }
         }
     }
     private fun actualizarFinal(){
         tableroFinal=tablero.map { StringBuilder(it.toString()) }.toMutableList()
-        for (i in 0 until tableroBanderas.size) {
-            for (j in 0 until tableroBanderas[i].length) {
+        for (i in 0..<tableroBanderas.size) {
+            for (j in 0..<tableroBanderas[i].length) {
                 if (tableroBanderas[i][j] == '*') {
                     tableroFinal[i][j] = 'B'
                 }
@@ -180,27 +182,17 @@ class Buscaminas {
         }
     }
     fun esMina(x:Int, y:Int, tipo:Char):Boolean{
-        if (tableroMinas[x-1][y-1] == '*' && tableroBanderas[x-1][y-1] == '-' && tipo == 'D' ) {
-            return true
-        }
-        else {
-            return false
-        }
+        return tableroMinas[x-1][y-1] == '*' && tableroBanderas[x-1][y-1] == '-' && tipo == 'D'
     }
     fun ganar():Boolean{
         var numGuiones=0
-        for (i in 0 until tablero.size){
-            for (j in 0 until tablero[i].length) {
+        for (i in 0..<tablero.size){
+            for (j in 0..<tablero[i].length) {
                 if (tablero[i][j]=='-') {
                     numGuiones++
                 }
             }
         }
-        if (numGuiones==numMinas) {
-            return true
-        }
-        else {
-            return false
-        }
+        return numGuiones==numMinas
     }
 }
