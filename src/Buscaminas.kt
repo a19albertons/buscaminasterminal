@@ -122,13 +122,13 @@ class Buscaminas {
         tablero=temporal.map { StringBuilder(it.toString()) }.toMutableList()
         tableroFinal=temporal.map { StringBuilder(it.toString()) }.toMutableList()
         tableroBanderas=temporal.map { StringBuilder(it.toString()) }.toMutableList()
-        añadirMinas(temporal, numMinas)
+        anadirMinas(temporal, numMinas)
         tableroMinas=temporal.map { StringBuilder(it.toString()) }.toMutableList()
 
     }
 
 //    Create by ChatGPT
-    fun añadirMinas(temporal: MutableList<StringBuilder> ,numMinas: Int) {
+    fun anadirMinas(temporal: MutableList<StringBuilder> ,numMinas: Int) {
         this.numMinas=numMinas
         val rows = temporal.size
         if (rows == 0) return

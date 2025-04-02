@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Se modifica el control del encabezado">
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,21 +84,57 @@
       <option name="project" value="LOCAL" />
       <updated>1743495059256</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Se modifica nuevamente la estetica para que sea un cuadrado más perfecto y se le añaden los numero de arriba abajo">
+      <option name="closed" value="true" />
+      <created>1743495219864</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743495219864</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Se modifica mensaje donde pedimos coordenadas para que sea más claro">
+      <option name="closed" value="true" />
+      <created>1743495281721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743495281721</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Rediseñamos la funcion es mina para controlar las 3 condiciones que controlan el acto de perder">
+      <option name="closed" value="true" />
+      <created>1743495607909</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743495607909</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera">
+      <option name="closed" value="true" />
+      <created>1743495758107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743495758107</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer candidato buscaminas funcional" />
     <MESSAGE value="Se añade encabezado numerico al tablero y se hace más bonito para tablero grandes" />
     <MESSAGE value="Se modifica el control del encabezado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se modifica el control del encabezado" />
+    <MESSAGE value="Se modifica nuevamente la estetica para que sea un cuadrado más perfecto y se le añaden los numero de arriba abajo" />
+    <MESSAGE value="Se modifica mensaje donde pedimos coordenadas para que sea más claro" />
+    <MESSAGE value="Rediseñamos la funcion es mina para controlar las 3 condiciones que controlan el acto de perder" />
+    <MESSAGE value="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/Buscaminas.kt</url>
-          <line>154</line>
+          <line>156</line>
           <properties class="Buscaminas" method="desmarcar">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
