@@ -176,6 +176,16 @@ class Buscaminas {
     }
     private fun actualizarFinal(){
         tableroFinal=tablero.map { StringBuilder(it.toString()) }.toMutableList()
+//        Limpia banderas indebidas
+        for (i in 0..< tablero.size){
+            for (j in 0..<tablero[i].length) {
+                if (tablero[i][j] != '-' && tableroBanderas[i][j] == '*') {
+                    tableroBanderas[i][j]='-'
+                }
+            }
+        }
+
+//        Actualiza tablero final
         for (i in 0..<tableroBanderas.size) {
             for (j in 0..<tableroBanderas[i].length) {
                 if (tableroBanderas[i][j] == '*') {
