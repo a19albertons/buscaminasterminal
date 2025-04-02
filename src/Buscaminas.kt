@@ -151,8 +151,11 @@ class Buscaminas {
         }
     }
     private fun marcar(x:Int, y:Int){
-        tableroBanderas[x-1][y-1]='*'
-        actualizarFinal()
+        if (tablero[x-1][y-1] == '-') {
+            tableroBanderas[x-1][y-1]='*'
+            actualizarFinal()
+        }
+
     }
     private fun desmarcar( x: Int, y: Int) {
         tableroBanderas[x-1][y-1]='-'

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Se aplican las recomendaciones del IDE a main.kt">
-      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
-    </list>
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Se añade un selector de modo de juego" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743576978506</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Se añade un selector de modo de juego">
+      <option name="closed" value="true" />
+      <created>1743577602939</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743577602939</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -175,7 +181,8 @@
     <MESSAGE value="Aplicación de numerosas recomendaciones del IDE" />
     <MESSAGE value="Modificamos el false final de descubrir mina por un true" />
     <MESSAGE value="Se aplican las recomendaciones del IDE a main.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se aplican las recomendaciones del IDE a main.kt" />
+    <MESSAGE value="Se añade un selector de modo de juego" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade un selector de modo de juego" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
