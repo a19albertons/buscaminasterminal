@@ -1,16 +1,16 @@
 import kotlin.random.Random
 
 class Buscaminas {
-    lateinit var tablero: MutableList<StringBuilder>
+    private lateinit var tablero: MutableList<StringBuilder>
     lateinit var tableroMinas: MutableList<StringBuilder>
-    lateinit var tableroBanderas: MutableList<StringBuilder>
+    private lateinit var tableroBanderas: MutableList<StringBuilder>
     lateinit var tableroFinal:MutableList<StringBuilder>
-    var numMinas = 0
+    private var numMinas = 0
 
 
 
     // Controla el descubrimiento del mapa
-    fun descubrir_mapa(x:Int, y:Int):Boolean {
+    private fun descubrir_mapa(x:Int, y:Int):Boolean {
 //    Control de limites
         if (x !in tablero.indices || y !in tablero[x].indices) return false
 //    no eres casilla sin probar
@@ -53,7 +53,7 @@ class Buscaminas {
     //Controla las minas alrededor de una posicon dada. Si alguna casilla
 // el numero de minas no coincide con el esperado esta aqui el
 // problema ya ha sucedido
-    fun comprobar_alrededor(x:Int, y:Int, tablero:MutableList<StringBuilder>):Char {
+    private fun comprobar_alrededor(x:Int, y:Int, tablero:MutableList<StringBuilder>):Char {
         var contador_minas= 0
 //    superior izquierda
         if (x-1 in tablero.indices && y-1 in tablero[x].indices && tablero[x-1][y-1]=='*') {
@@ -128,7 +128,7 @@ class Buscaminas {
     }
 
 //    Create by ChatGPT
-    fun anadirMinas(temporal: MutableList<StringBuilder> ,numMinas: Int) {
+    private fun anadirMinas(temporal: MutableList<StringBuilder> ,numMinas: Int) {
         this.numMinas=numMinas
         val rows = temporal.size
         if (rows == 0) return
@@ -144,17 +144,17 @@ class Buscaminas {
         }
     }
 
-    fun indicarDescubrimiento(x: Int, y: Int){
+    private fun indicarDescubrimiento(x: Int, y: Int){
         if (tableroBanderas[x-1][y-1]!='B') {
             descubrir_mapa(x-1, y-1)
             actualizarFinal()
         }
     }
-    fun marcar(x:Int, y:Int){
+    private fun marcar(x:Int, y:Int){
         tableroBanderas[x-1][y-1]='*'
         actualizarFinal()
     }
-    fun desmarcar( x: Int, y: Int) {
+    private fun desmarcar( x: Int, y: Int) {
         tableroBanderas[x-1][y-1]='-'
         actualizarFinal()
     }
@@ -169,7 +169,7 @@ class Buscaminas {
             desmarcar(x,y)
         }
     }
-    fun actualizarFinal(){
+    private fun actualizarFinal(){
         tableroFinal=tablero.map { StringBuilder(it.toString()) }.toMutableList()
         for (i in 0 until tableroBanderas.size) {
             for (j in 0 until tableroBanderas[i].length) {
