@@ -1,10 +1,28 @@
 fun main() {
     val buscaminas = Buscaminas()
-    println("Dame 2 numero por un espacio para el tamaño de su tablero que sean positivos")
-    val tamano= readln().split(" ").map { it.toInt() }
-    println("Dame un numero de minas sea coherente y logico con el tamaño de su tablero")
-    val numMinas = readln().toInt()
-    buscaminas.crearTablero(tamano[0],tamano[1],numMinas)
+    println("Elige un modo de juego")
+    println("'classic' tablero 8x8 y 9 minas")
+    println("'easy' tablero 9x9 y 10 minas")
+    println("'medium' tablero 16x16 y 40 minas")
+    println("'expert' tablero 30x16 y 99 minas")
+    println("'custom' se le hacen preguntas sobre el tamaño del tablero y el numero de minas")
+    println("escriba la palbra entre '' simples para iniciar el modo. Si no introduce un valor valido se asume classic")
+    val pregunta= readln()
+    when (pregunta) {
+        "classic" -> buscaminas.crearTablero(8,8,9)
+        "easy" -> buscaminas.crearTablero(9,9,10)
+        "medium" -> buscaminas.crearTablero(16,16,40)
+        "expert" -> buscaminas.crearTablero(16,30,99)
+        "custom" -> {
+            println("Dame 2 numero por un espacio para el tamaño de su tablero que sean positivos")
+            val tamano= readln().split(" ").map { it.toInt() }
+            println("Dame un numero de minas sea coherente y logico con el tamaño de su tablero")
+            val numMinas = readln().toInt()
+            buscaminas.crearTablero(tamano[0],tamano[1],numMinas)
+        }
+        else -> buscaminas.crearTablero(8,8,9)
+    }
+
     mostrarTablero(buscaminas.tableroFinal)
     println("Dame una X (fila) y una Y (columna) separadas por un espcaio")
     var coordenadas = readln().split(" ")

@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Aplicación de numerosas recomendaciones del IDE">
-      <change beforePath="$PROJECT_DIR$/src/Buscaminas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buscaminas.kt" afterDir="false" />
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Se aplican las recomendaciones del IDE a main.kt">
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +43,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/a19albertons/IdeaProjects/BuscaminasTerminal/src/Main.kt&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/a19albertons/IdeaProjects/BuscaminasTerminal/src/Main.kt",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -142,7 +143,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743576769977</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Modificamos el false final de descubrir mina por un true">
+      <option name="closed" value="true" />
+      <created>1743576871259</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576871259</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Se aplican las recomendaciones del IDE a main.kt">
+      <option name="closed" value="true" />
+      <created>1743576978506</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576978506</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -156,7 +173,9 @@
     <MESSAGE value="Correcion funcion con caracteres no_ascii" />
     <MESSAGE value="Se pasan varias funciones y variables a un estado privado" />
     <MESSAGE value="Aplicación de numerosas recomendaciones del IDE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aplicación de numerosas recomendaciones del IDE" />
+    <MESSAGE value="Modificamos el false final de descubrir mina por un true" />
+    <MESSAGE value="Se aplican las recomendaciones del IDE a main.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se aplican las recomendaciones del IDE a main.kt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
