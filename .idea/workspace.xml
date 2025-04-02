@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Aplicación de numerosas recomendaciones del IDE">
+      <change beforePath="$PROJECT_DIR$/src/Buscaminas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buscaminas.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +118,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743495758107</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Correcion funcion con caracteres no_ascii">
+      <option name="closed" value="true" />
+      <created>1743576322950</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576322950</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Se pasan varias funciones y variables a un estado privado">
+      <option name="closed" value="true" />
+      <created>1743576535738</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576535738</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Aplicación de numerosas recomendaciones del IDE">
+      <option name="closed" value="true" />
+      <created>1743576769977</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743576769977</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,7 +153,10 @@
     <MESSAGE value="Se modifica mensaje donde pedimos coordenadas para que sea más claro" />
     <MESSAGE value="Rediseñamos la funcion es mina para controlar las 3 condiciones que controlan el acto de perder" />
     <MESSAGE value="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadimos a indicarDescubrimiento un primer sistema de control de la bandera" />
+    <MESSAGE value="Correcion funcion con caracteres no_ascii" />
+    <MESSAGE value="Se pasan varias funciones y variables a un estado privado" />
+    <MESSAGE value="Aplicación de numerosas recomendaciones del IDE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aplicación de numerosas recomendaciones del IDE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -140,6 +169,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/Buscaminas.kt</url>
+          <line>55</line>
+          <properties class="Buscaminas" method="comprobarAlrededor">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

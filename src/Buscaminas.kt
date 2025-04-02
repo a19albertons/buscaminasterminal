@@ -47,7 +47,7 @@ class Buscaminas {
             descubrirMapa(x + 1, y + 1)
         }
 
-        return false
+        return true
     }
 
     //Controla las minas alrededor de una posicon dada. Si alguna casilla
