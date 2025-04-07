@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Se corrige un bug detectado con las banderas" />
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +51,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/a19albertons/IdeaProjects/BuscaminasTerminal/src/Main.kt",
-    "settings.editor.selected.configurable": "com.github.copilot.settings.ApplicationConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -173,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743577882036</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente">
+      <option name="closed" value="true" />
+      <created>1743578253177</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1743578253177</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -191,7 +201,8 @@
     <MESSAGE value="Se aplican las recomendaciones del IDE a main.kt" />
     <MESSAGE value="Se añade un selector de modo de juego" />
     <MESSAGE value="Se corrige un bug detectado con las banderas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se corrige un bug detectado con las banderas" />
+    <MESSAGE value="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

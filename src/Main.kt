@@ -28,7 +28,7 @@ fun main() {
     var coordenadas = readln().split(" ")
     println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
     var tipo = readln().uppercase().first()
-    buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
+    accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo, buscaminas)
     while (!(buscaminas.esMina(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo))) {
         if (buscaminas.ganar()){
             break
@@ -40,7 +40,7 @@ fun main() {
         coordenadas = readln().split(" ")
         println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
         tipo = readln().uppercase().first()
-        buscaminas.accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo)
+        accionRealizar(coordenadas[0].toInt(), coordenadas[1].toInt(), tipo, buscaminas)
     }
     if (buscaminas.ganar()){
         println("has ganado")
@@ -76,5 +76,18 @@ fun mostrarTablero(tablero: MutableList<StringBuilder>) {
         }
         print(encabezado)
         println()
+    }
+}
+fun accionRealizar(x: Int, y: Int, accion: Char,buscaminas: Buscaminas){
+    when (accion) {
+        'D' -> {
+            buscaminas.indicarDescubrimiento(x, y)
+        }
+        'M' -> {
+            buscaminas.marcar(x,y)
+        }
+        ' ' -> {
+            buscaminas.desmarcar(x,y)
+        }
     }
 }

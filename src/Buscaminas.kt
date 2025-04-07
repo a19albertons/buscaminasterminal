@@ -144,35 +144,22 @@ class Buscaminas {
         }
     }
 
-    private fun indicarDescubrimiento(x: Int, y: Int){
+    fun indicarDescubrimiento(x: Int, y: Int){
         if (tableroBanderas[x-1][y-1]!='B') {
             descubrirMapa(x-1, y-1)
             actualizarFinal()
         }
     }
-    private fun marcar(x:Int, y:Int){
+    fun marcar(x:Int, y:Int){
         if (tablero[x-1][y-1] == '-') {
             tableroBanderas[x-1][y-1]='*'
             actualizarFinal()
         }
 
     }
-    private fun desmarcar( x: Int, y: Int) {
+    fun desmarcar( x: Int, y: Int) {
         tableroBanderas[x-1][y-1]='-'
         actualizarFinal()
-    }
-    fun accionRealizar(x: Int, y: Int, accion: Char){
-        when (accion) {
-            'D' -> {
-                indicarDescubrimiento(x, y)
-            }
-            'M' -> {
-                marcar(x,y)
-            }
-            ' ' -> {
-                desmarcar(x,y)
-            }
-        }
     }
     private fun actualizarFinal(){
         tableroFinal=tablero.map { StringBuilder(it.toString()) }.toMutableList()
