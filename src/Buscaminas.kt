@@ -2,13 +2,18 @@ import kotlin.random.Random
 
 class Buscaminas {
     private lateinit var tablero: MutableList<StringBuilder>
-    lateinit var tableroMinas: MutableList<StringBuilder>
+    private lateinit var tableroMinas: MutableList<StringBuilder>
     private lateinit var tableroBanderas: MutableList<StringBuilder>
-    lateinit var tableroFinal:MutableList<StringBuilder>
+    private lateinit var tableroFinal:MutableList<StringBuilder>
     private var numMinas = 0
 
 
-
+    fun tableroDeMinas(): MutableList<StringBuilder> {
+        return tableroMinas.map { StringBuilder(it.toString()) }.toMutableList()
+    }
+    fun tableroDeFinal(): MutableList<StringBuilder> {
+        return tableroFinal.map { StringBuilder(it.toString()) }.toMutableList()
+    }
     // Controla el descubrimiento del mapa
     private fun descubrirMapa(x:Int, y:Int):Boolean {
 //    Control de limites

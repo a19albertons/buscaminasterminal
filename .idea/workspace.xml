@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente">
+    <list default="true" id="552b8442-9d27-4bad-aae2-c2bd59d42dff" name="Changes" comment="Modificamos el main.kt y Buscaminas.kt para arreglar un error en la separación de la logica de la entrada salida">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Buscaminas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buscaminas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/a19albertons/IdeaProjects/BuscaminasTerminal/src/Main.kt",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/a19albertons/IdeaProjects/BuscaminasTerminal/src/Main.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -183,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743578253177</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Modificamos el main.kt y Buscaminas.kt para arreglar un error en la separación de la logica de la entrada salida">
+      <option name="closed" value="true" />
+      <created>1744008897312</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1744008897312</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,14 +212,15 @@
     <MESSAGE value="Se añade un selector de modo de juego" />
     <MESSAGE value="Se corrige un bug detectado con las banderas" />
     <MESSAGE value="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadimos capacidad para limpiar banderas en zonas que han sido limpiadas automaticamente" />
+    <MESSAGE value="Modificamos el main.kt y Buscaminas.kt para arreglar un error en la separación de la logica de la entrada salida" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificamos el main.kt y Buscaminas.kt para arreglar un error en la separación de la logica de la entrada salida" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/Buscaminas.kt</url>
-          <line>159</line>
+          <line>164</line>
           <properties class="Buscaminas" method="desmarcar">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -218,7 +229,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-function">
           <url>file://$PROJECT_DIR$/src/Buscaminas.kt</url>
-          <line>55</line>
+          <line>60</line>
           <properties class="Buscaminas" method="comprobarAlrededor">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

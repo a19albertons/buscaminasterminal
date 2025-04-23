@@ -23,7 +23,7 @@ fun main() {
         else -> buscaminas.crearTablero(8,8,9)
     }
 
-    mostrarTablero(buscaminas.tableroFinal)
+    mostrarTablero(buscaminas.tableroDeFinal())
     println("Dame una X (fila) y una Y (columna) separadas por un espcaio")
     var coordenadas = readln().split(" ")
     println("Indica si es descubrir (D), marcar (M) o desmarcar (' ')")
@@ -34,7 +34,7 @@ fun main() {
             break
         }
         else {
-            mostrarTablero(buscaminas.tableroFinal)
+            mostrarTablero(buscaminas.tableroDeFinal())
         }
         println("Dame una X (fila) y una Y (columna) separadas por un espcaio")
         coordenadas = readln().split(" ")
@@ -47,7 +47,7 @@ fun main() {
     }
     else {
         println("has perdido estas eran las ubicaciones de las minas")
-        mostrarTablero(buscaminas.tableroMinas)
+        mostrarTablero(buscaminas.tableroDeMinas())
 
     }
 
